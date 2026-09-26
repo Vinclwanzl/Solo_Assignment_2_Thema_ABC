@@ -5,6 +5,9 @@
     "types": ["vite/client"],
     "allowArbitraryExtensions": true,
 
+    // added so that App.vue can handle useNotes.js
+    "allowJs": true,
+
     /* Linting */
     "noUnusedLocals": true,
     "noUnusedParameters": true,
