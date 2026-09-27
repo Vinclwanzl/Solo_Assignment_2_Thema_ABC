@@ -38,5 +38,5 @@ export function useNotes() {
     return id;
   }
  
-  return { notes, addNote, deleteNote, filteredNotes }
+  return { addNote, deleteNote, filteredNotes }
 }

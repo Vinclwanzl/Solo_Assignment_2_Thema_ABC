@@ -1,5 +1,35 @@
 # Vue 3 + TypeScript + Vite
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+I used: "npm create vite@latest Assignment_A -- --template vue-ts";  
 
-Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
+Voraussetzung:  
+Node.js installiert  
+  
+Repository klonen:  
+git clone https://github.com/Vinclwanzl/Solo_Assignment_1_Stufe_A.git
+  
+Abhängigkeiten installieren:  
+npm install  
+  
+Dev-Server starten:  
+npm run dev  
+  
+http://localhost:5173/
+  
+Begründung der Struktur  
+  
+Die Logik liegt im Composable useNotes.js, damit die Komponenten nur für die Darstellung zuständig sind (vermeiden von Spagetthi Architektur). Außerdem bleibt die Logik an einer Stelle und kann damit sauber von anderen Komponenten Wiederverwendet werden. Zusätzlich ist useLocalStorage.js von useNotes.js getrennt um die Datenpersistenz  von der Logik abzukapseln.   
+  
+Reflexionsfragen  
+  
+Warum darf NoteCard die Notiz-Prop nicht selbst verändern, und wie löst ihr das stattdessen?   
+  
+Props sollen nicht direkt vom Child verändert werden, da die Daten vom Parent gesteuert werden. Deswegen wird ein delete-Event getriggered, wodurch der Parent  deleteNote() aufruft.  
+  
+Was passiert, wenn zwei Komponenten dasselbe useNotes() aufrufen - teilen sie sich die Notizen oder nicht?  
+  
+Ja, der Aufruf von useNotes() erstellt zwar eine neue Instanz von useLocalStorage(), allerdings verwendet man denselben localStorage wodurch die gleichen Notizen vorhanden sind  
+  
+Wozu dient das Note-Interface, wenn der Code auch ohne es liefe?  
+  
+Das Note-Interface beschreibt die Struktur der Notizen und gibt somit eine vorgegeben Schablone für alle Notizen in den Komponenten for.  

@@ -13,16 +13,16 @@
 </script>
 
 <template>
-  <h1>My Notes</h1>
+  <main>
+    <NoteForm @add="addNote" />
 
-  <NoteForm @add="addNote" />
+    <SearchBar v-model="searchTerm" />
 
-  <SearchBar v-model="searchTerm" />
-
-  <NoteCard 
-    v-for="note in displayedNotes" 
-    :key="note.id" 
-    :note="note" 
-    @delete="deleteNote"
-  />
+    <NoteCard 
+      v-for="note in displayedNotes" 
+      :key="note.id" 
+      :note="note" 
+      @delete="deleteNote"
+    />
+  </main>
 </template>
