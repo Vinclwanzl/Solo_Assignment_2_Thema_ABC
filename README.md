@@ -1,12 +1,12 @@
 # Vue 3 + TypeScript + Vite
 
-I used: "npm create vite@latest Assignment_A -- --template vue-ts";  
+I used: "npm create vite@latest Solo_Assignment_2_Stufe_A -- --template vue-ts";  
 
 Voraussetzung:  
 Node.js installiert  
   
 Repository klonen:  
-git clone https://github.com/Vinclwanzl/Solo_Assignment_1_Stufe_A.git
+git clone https://github.com/Vinclwanzl/Solo_Assignment_2_Thema_ABC.git
   
 Abhängigkeiten installieren:  
 npm install  
